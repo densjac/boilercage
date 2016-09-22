@@ -1,7 +1,7 @@
 {
-  "name": "kr",
-  "version": "1.0.0",
-  "description": "koa react testing",
+  "name": "BoilerCage",
+  "version": "0.0.1",
+  "description": "Small boilerplate for React + Redux + Webpack + ReactHMR + SemanticUI + Koa.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/densjac/kr.git"
+    "url": "git+https://github.com/densjac/boilercage.git"
   },
   "author": "dennibonito",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/densjac/kr/issues"
+    "url": "https://github.com/densjac/boilercage/issues"
   },
-  "homepage": "https://github.com/densjac/kr#readme",
+  "homepage": "https://github.com/densjac/boilercage#readme",
   "dependencies": {
     "css-loader": "^0.25.0",
     "immutable": "^3.8.1",
@@ -47,6 +47,8 @@
     "react-hot-loader": "^3.0.0-beta.5",
     "redux-devtools": "^3.3.1",
     "webpack": "^2.1.0-beta.25",
-    "webpack-dev-server": "^1.16.1"
+    "webpack-dev-server": "^1.16.1",
+    "gulp": "^3.9.1",
+    "semantic-ui": "^2.2.4"
   }
 }

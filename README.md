@@ -6,7 +6,26 @@ Based on [this tutorial](http://blog.joanboixados.com/building-a-boilerplate-for
 
 ## Installation
 
-TODO: Describe the installation process
+For development:
+
+First:
+```
+npm install
+```
+When being asked by `semantic-ui`'s install script to give location, enter `app/semantic`.
+
+Then, we should build `semantic-ui` dist files:
+
+```
+cd app/semantic
+../../node_modules/gulp/bin/gulp.js build
+```
+
+To check if everything builds correctly, go back to project root directory, and run
+
+```
+npm build
+```
 
 ## Usage
 
