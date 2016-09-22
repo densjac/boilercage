@@ -4,6 +4,11 @@ Small boilerplate for React + Redux + Webpack + ReactHMR + SemanticUI + Koa.
 
 Based on [this tutorial](http://blog.joanboixados.com/building-a-boilerplate-for-a-koa-redux-react-application-including-webpack-mocha-and-sass/), updated for working as Sep 2016.
 
+## Requirements
+
+- NodeJS >= v6.6.0
+- npm >= 30.10.7
+
 ## Installation
 
 For development:
@@ -24,7 +29,7 @@ cd app/semantic
 To check if everything builds correctly, go back to project root directory, and run
 
 ```
-npm build
+npm run build
 ```
 
 ## Usage
