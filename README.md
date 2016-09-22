@@ -1,4 +1,4 @@
-# Project Name
+# BoilerCage
 
 Small boilerplate for React + Redux + Webpack + ReactHMR + SemanticUI + Koa.
 
