@@ -1,7 +1,23 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import { IndexRoute, Router, Route, Link, hashHistory } from 'react-router'
+import RadioOption from './Utilities.jsx';
 
+import Button from './Click.jsx'
+// import { IndexRoute } from 'react-router'
+
+// Defining a component with initial state that would be set in the constructor with this.state = { name : value}
+// class MyComponent extends React.Component {
+//   constructor() {
+//     super();
+ 
+//     this.state = { test: 1 };
+//   }
+ 
+//   render() {
+//     render (<div>Hello World!</div>);
+//   }
+// }
 
 class App extends React.Component{
   render() {
@@ -35,7 +51,11 @@ class Inbox extends React.Component{
     return (
       <div>
         <h2>Inbox</h2>
-        {this.props.children || "Welcome to this component"}
+        
+        Welcome to this component
+        <Link to="inbox/messages/15">message 15</Link> 
+        {this.props.children} 
+
       </div>
     )
   }
@@ -47,36 +67,37 @@ class Message extends React.Component{
   }
 }
 
-
-import { IndexRoute } from 'react-router'
-
 class Dashboard extends React.Component{
+  // InitialState() {
+  //   console.log("testing getInitialState")
+  //   return {
+  //     tacos: [
+  //       { name: 'duck confit' },
+  //       { name: 'carne asada' },
+  //       { name: 'shrimp' }
+  //     ]
+  //   }
+  // }
   render() {
-    return <div>This is your Dashboard!!</div>
+    return (
+    <div>
+    <p>This is your Dashboard!!</p>
+    <Button /> 
+    </div>
+    )
   } 
 }
 
-const routes = {
-  path: '/',
-  component: App,
-  indexRoute: { component: Dashboard },
-  childRoutes: [
-    { path: 'about', component: About },
-    {
-      path: 'inbox',
-      component: Inbox,
-      childRoutes: [{
-        path: 'messages/:id',
-        onEnter: ({ params }, replace) => replace(`/messages/${params.id}`)
-      }]
-    },
-    {
-      component: Inbox,
-      childRoutes: [{
-        path: 'messages/:id', component: Message
-      }]
-    }
-  ]
-}
 
-render(<Router routes={routes} />, document.body)
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      {/* Show the dashboard at / */}
+      <IndexRoute component={Dashboard} />
+      <Route path="about" component={About} />
+      <Route path="inbox" component={Inbox}>
+        <Route path="messages/:id" component={Message} />
+      </Route>
+    </Route>
+  </Router>
+), document.body)
