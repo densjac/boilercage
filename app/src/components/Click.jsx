@@ -1,12 +1,10 @@
 import React from 'react';
 
-import '../../semantic/dist/components/button.css';
-
-export default class Button extends React.Component {
+export default class Click extends React.Component {
     render() {
-         return (	
+         return (
          <div>
-         	<h1> WITH A </h1> <button className="ui button">Click me now </button>
+         	<h1> WITH  </h1> <button className="ui button">Click me later</button>
          </div>);
         }
 }

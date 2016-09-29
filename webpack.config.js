@@ -7,6 +7,7 @@ var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
     path.resolve(ROOT_PATH, 'app/src/index'),
   ],
   module: {
@@ -15,8 +16,10 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel',
       query: {
-      	presets:['es2015', 'react', 'react-hmre']
-      }
+      	presets:['es2015', 'react'],
+        plugins: ['react-hot-loader/babel']
+      },
+      include: path.resolve(ROOT_PATH, 'app/src'),
     },
     {
       test: /\.scss$/,
@@ -26,8 +29,9 @@ module.exports = {
       test: /\.css$/,
       loaders: ['style', 'css']
     },
-    { test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      loader: 'url-loader?limit=100000' 
+    {
+      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'url-loader?limit=100000'
     }]
   },
   resolve: {
