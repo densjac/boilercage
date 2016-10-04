@@ -1,17 +1,16 @@
 import React from 'react';
-import { IndexRoute, Router, Route, hashHistory } from 'react-router'
-import App, { Dashboard,  About,  Inbox,  Message } from './App.jsx';
+import { IndexRoute, Router, Route, browserHistory } from 'react-router'
+import App, { Component1,  Component2,  Content, Subcomponent } from './App.jsx';
 
 export default class RouterContainer extends React.Component{
   render(){
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
-          {/* Show the dashboard at / */}
-          <IndexRoute component={Dashboard} />
-          <Route path="about" component={About} />
-          <Route path="inbox" component={Inbox}>
-            <Route path="messages/:id" component={Message} />
+          <IndexRoute component={Content} />
+          <Route path="component1" component={Component1} />
+          <Route path="component2" component={Component2}>
+            <Route path="subcomponent/:id" component={Subcomponent} />
           </Route>
         </Route>
       </Router>

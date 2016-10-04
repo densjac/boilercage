@@ -4,6 +4,10 @@ Small boilerplate for React + Redux + Webpack + ReactHMR + SemanticUI + Koa.
 
 Based on [this tutorial](http://blog.joanboixados.com/building-a-boilerplate-for-a-koa-redux-react-application-including-webpack-mocha-and-sass/), updated for working as Sep 2016.
 
+## TODO:
+
+- Add redux example
+
 ## Requirements
 
 - NodeJS >= v6.6.0
