@@ -21,7 +21,7 @@ First:
 ```
 npm install
 ```
-When being asked by `semantic-ui`'s install script to give location, enter `app/semantic`.
+When being asked by `semantic-ui`'s install script will tell that ` It looks like you have a semantic.json file already` you must select `Yes, extend my current setting`, after that select `Automatic (Use defaults locations and all component`. Semantic instalation will detect you are using NPM and ask you for your project folder, and if that is correct you should put `Yes` and then give location, enter `app/semantic`.
 
 Then, we should build `semantic-ui` dist files:
 
